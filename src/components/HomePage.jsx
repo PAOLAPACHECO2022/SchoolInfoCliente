@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Aside from "./Aside";
@@ -44,7 +43,7 @@ const HomePage = () => {
 
     const countCourses = async () => {
         const response = await fetch(
-            https://schoolinfoserver.onrender.com/courses/count/all", {
+            "https://schoolinfoserver.onrender.com/courses/count/all", {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
