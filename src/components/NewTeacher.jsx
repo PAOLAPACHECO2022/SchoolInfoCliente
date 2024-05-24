@@ -8,14 +8,12 @@ const NewTeacher = () => {
   const token = useSelector((state) => state.token);
   const navigate = useNavigate();
 
-
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [phone, setPhone] = useState("");
   const [area, setArea] = useState("");
-
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -28,8 +26,7 @@ const NewTeacher = () => {
     formData.append("area", area);
 
     const savedTeacherResponse = await fetch(
-      
-      `https://schoolinfoserver.onrender.com/auth/registerTeacher`,
+      "https://schoolinfoserver.onrender.com/auth/registerTeacher",
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
@@ -178,3 +175,4 @@ const NewTeacher = () => {
 };
 
 export default NewTeacher;
+
