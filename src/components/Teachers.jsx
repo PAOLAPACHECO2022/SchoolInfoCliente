@@ -16,7 +16,7 @@ const Teachers = () => {
 
 
   const getTeachers = async () => {
-    const response = await fetch(`https://schoolinfoserver.onrender.com/teachers`, {
+    const response = await fetch("https://schoolinfoserver.onrender.com/teachers",{
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
