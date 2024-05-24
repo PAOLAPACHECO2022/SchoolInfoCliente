@@ -32,9 +32,8 @@ const NewStudent = () => {
     formData.append("gradeId", gradeId);
 
     const savedStudentResponse = await fetch(
-     
-      `https://schoolinfoserver.onrender.com/auth/registerStudent`,
-      {
+     "https://schoolinfoserver.onrender.com/auth/registerStudent",
+         {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,
