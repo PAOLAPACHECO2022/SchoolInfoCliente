@@ -9,7 +9,7 @@ const NewStudent = () => {
   const { gradeId } = useParams();
   const token = useSelector((state) => state.token);
   const navigate = useNavigate();
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -33,7 +33,7 @@ const NewStudent = () => {
 
     const savedStudentResponse = await fetch(
      
-      `${API_URL}/auth/registerStudent`,
+      `https://schoolinfoserver.onrender.com/auth/registerStudent`,
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
