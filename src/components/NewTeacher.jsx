@@ -7,7 +7,7 @@ import '../index.css';
 const NewTeacher = () => {
   const token = useSelector((state) => state.token);
   const navigate = useNavigate();
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
@@ -29,7 +29,7 @@ const NewTeacher = () => {
 
     const savedTeacherResponse = await fetch(
       
-      `${API_URL}/auth/registerTeacher`,
+      `https://schoolinfoserver.onrender.com/auth/registerTeacher`,
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
