@@ -13,11 +13,11 @@ const GradesByLevel = () => {
   const grades = useSelector((state) => state.grades);
   const token = useSelector((state) => state.token);
   const { level, action } = useParams();
-  const API_URL = process.env.REACT_APP_API_URL;
+ 
 
   const getGrades = async () => {
     const response = await fetch(
-      `${API_URL}/grades/${level}`, 
+      `https://schoolinfoserver.onrender.com/grades/${level}`, 
      
     {
       method: "GET",
