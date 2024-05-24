@@ -1,11 +1,7 @@
 import React, { Component} from "react";
 import '../index.css';
-import { useNavigate } from "react-router-dom";
-
-
-
 export default class Contacto extends Component {
-const navigate = useNavigate();
+
   render() {
     
     return (
@@ -118,10 +114,7 @@ const navigate = useNavigate();
        
       </div>
    
-      <a  classNames="mt-2 mx-2 my-2 " 
-           onClick={() => navigate("/home")}
-          role="button" 
-        
+      <a  classNames="mt-2 mx-2 my-2 " type="submit" href = "https://schoolinfocliente.onrender.com/home"
       style={{
         color: '#4c0546',
         fontWeight: 'bold',
