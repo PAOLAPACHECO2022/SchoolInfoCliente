@@ -1,3 +1,4 @@
+
 import Sidebar from "./Sidebar";
 import Aside from "./Aside";
 import { useState } from "react";
@@ -9,7 +10,6 @@ const NewGrade = () => {
   const token = useSelector((state) => state.token);
   const navigate = useNavigate();
   const { level } = useParams();
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const [gradeName, setGradeName] = useState("");
   const [levelName, setLevelName] = useState(level);
@@ -18,8 +18,7 @@ const NewGrade = () => {
     e.preventDefault();
 
     const savedGradeResponse = await fetch(
-  
-      `https://schoolinfoserver.onrender.com/grades/createGrade`,
+      "https://schoolinfoserver.onrender.com/grades/createGrade",
       {
         method: "POST",
         headers: {
