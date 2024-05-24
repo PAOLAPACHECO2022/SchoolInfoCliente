@@ -19,7 +19,7 @@ const NewGrade = () => {
 
     const savedGradeResponse = await fetch(
   
-      `${API_URL}/grades/createGrade`,
+      `https://schoolinfoserver.onrender.com/grades/createGrade`,
       {
         method: "POST",
         headers: {
