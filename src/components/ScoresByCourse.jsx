@@ -1,3 +1,4 @@
+
 import { useEffect, useState, useCallback } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setScores } from "state";
@@ -19,7 +20,7 @@ const ScoresByCourse = () => {
 
   const getScores = useCallback(async () => {
     const response = await fetch(
-      `https://schoolinfocliente.onrender.com/scores/${courseId}/course`, // Cambia esta línea
+      `https://schoolinfoserver.onrender.com/scores/${courseId}/course`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -43,7 +44,7 @@ const ScoresByCourse = () => {
 
   const handleDelete = async (scoreId) => {
     const response = await fetch(
-      `https://schoolinfocliente.onrender.com/scores/${scoreId}/delete`, // Cambia esta línea
+      `https://schoolinfoserver.onrender.com/scores/${scoreId}/delete`,
       {
         method: "DELETE",
         headers: {
