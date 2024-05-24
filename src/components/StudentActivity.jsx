@@ -12,11 +12,11 @@ const StudentActivity = () => {
   const user = useSelector((state) => state.user);
   const [currentPage, setCurrentPage] = useState(0);
   const [searchTerm, setSearchTerm] = useState(""); // Estado para el término de búsqueda
- const API_URL = process.env.REACT_APP_API_URL;
+
  
   const getActivitiesRecord = async () => {
     const response = await fetch(
-      `${API_URL}/activities/${user._id}/student`,
+      `https://schoolinfoserver.onrender.com/activities/${user._id}/student`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
