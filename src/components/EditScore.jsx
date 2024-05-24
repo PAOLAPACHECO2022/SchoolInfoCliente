@@ -12,7 +12,7 @@ const EditScore = () => {
     const API_URL = process.env.REACT_APP_API_URL;
 
     const getScore = async () => {
-        const response = await fetch(`${API_URL}/scores/${scoreId}/score`, {
+        const response = await fetch(`https://schoolinfoserver.onrender.com/scores/${scoreId}/score`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
