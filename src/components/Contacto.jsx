@@ -2,10 +2,10 @@ import React, { Component} from "react";
 import '../index.css';
 import { useNavigate } from "react-router-dom";
 
-const navigate = useNavigate();
+
 
 export default class Contacto extends Component {
-    
+const navigate = useNavigate();
   render() {
     
     return (
