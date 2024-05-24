@@ -19,7 +19,7 @@ const ScoresByCourse = () => {
 
   const getScores = useCallback(async () => {
     const response = await fetch(
-      `https://schoolinfo.com/scores/${courseId}/course`, // Cambia esta línea
+      `https://schoolinfocliente.onrender.com/scores/${courseId}/course`, // Cambia esta línea
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -43,7 +43,7 @@ const ScoresByCourse = () => {
 
   const handleDelete = async (scoreId) => {
     const response = await fetch(
-      `https://schoolinfo.com/scores/${scoreId}/delete`, // Cambia esta línea
+      `https://schoolinfocliente.onrender.com/scores/${scoreId}/delete`, // Cambia esta línea
       {
         method: "DELETE",
         headers: {
