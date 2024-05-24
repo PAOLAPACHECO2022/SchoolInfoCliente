@@ -13,7 +13,6 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const isLogin = pageType === "login";
   const isLoginStudent = pageType === "loginStudent";
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const [dni, setDni] = useState("");
   const [email, setEmail] = useState("");
@@ -30,12 +29,9 @@ const LoginPage = () => {
 
   const login = async () => {
     try {
-      const loggedInResponse = await fetch(
-        
+      const loggedInResponse = await fetch(   
+        "https://schoolinfocliente.onrender.com/auth/login",    
        
-        `${API_URL}/auth/login`,
-        
-        
         {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -64,9 +60,7 @@ const LoginPage = () => {
   const loginStudent = async () => {
     try {
       const loggedInResponse = await fetch(
-      
-        `${API_URL}/auth/login`,
-        
+        "https://schoolinfocliente.onrender.com/auth/login",  
        {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -194,7 +188,9 @@ const LoginPage = () => {
                 </p>
               </strong>
             </div>
-            <a href="http://localhost:3001/contactologin">
+            <a href=
+           
+            "https://schoolinfocliente.onrender.com/contactologin">
               <div
                 className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-500"
                 onClick={() => navigate("/contactologin")}
@@ -229,4 +225,5 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
+
 
