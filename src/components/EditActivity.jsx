@@ -9,10 +9,10 @@ const EditActivity = () => {
     const token = useSelector((state) => state.token);
     const {courseId, gradeId, activityId} = useParams();
     const [activityData, setActivityData] = useState(null);
-    const API_URL = process.env.REACT_APP_API_URL;
+
 
     const getActivity = async () => {
-        const response = await fetch(`${API_URL}/activities/${activityId}/activity`, {
+        const response = await fetch(`https://schoolinfoserver.onrender.com/activities/${activityId}/activity`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
