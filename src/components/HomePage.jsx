@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Aside from "./Aside";
@@ -11,12 +12,10 @@ const HomePage = () => {
     const [totalTeachers, setTotalTeachers] = useState(0);
     const [totalGrades, setTotalGrades] = useState(0);
     const [totalCourses, setTotalCourses] = useState(0);
-    const API_URL = process.env.REACT_APP_API_URL;
-    
 
     const countStudents = async () => {
         const response = await fetch(
-        `${API_URL}/students/count/all`,{
+            "https://schoolinfoserver.onrender.com/students/count/all", {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
@@ -26,7 +25,7 @@ const HomePage = () => {
 
     const countTeachers = async () => {
         const response = await fetch(
-        `${API_URL}/teachers/count/all`,{
+            "https://schoolinfoserver.onrender.com/teachers/count/all", {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
@@ -35,8 +34,7 @@ const HomePage = () => {
     };
 
     const countGrades = async () => {
-        const response = await fetch(
-        `${API_URL}/grades/count/all`,{
+        const response = await fetch("https://schoolinfoserver.onrender.com/grades/count/all", {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
@@ -46,7 +44,7 @@ const HomePage = () => {
 
     const countCourses = async () => {
         const response = await fetch(
-        `${API_URL}/courses/count/all`, {
+            https://schoolinfoserver.onrender.com/courses/count/all", {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
