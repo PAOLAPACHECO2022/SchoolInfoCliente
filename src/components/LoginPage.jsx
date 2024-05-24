@@ -33,7 +33,7 @@ const LoginPage = () => {
       const loggedInResponse = await fetch(
         
        
-        `${API_URL}/auth/login`,
+        `${API_URL}auth/login`,
         
         
         {
@@ -65,7 +65,7 @@ const LoginPage = () => {
     try {
       const loggedInResponse = await fetch(
       
-        `${API_URL}/auth/login`,
+        `${API_URL}auth/login`,
         
        {
         method: "POST",
