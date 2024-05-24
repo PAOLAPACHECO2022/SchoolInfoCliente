@@ -2,11 +2,12 @@ import React, { Component} from "react";
 import '../index.css';
 import { useNavigate } from "react-router-dom";
 
+const navigate = useNavigate();
 
 export default class Contacto extends Component {
     
   render() {
-    const navigate = useNavigate();
+    
     return (
       
         <header class="fondoy fondoy-wrap p-5 d-flex">
@@ -116,8 +117,7 @@ export default class Contacto extends Component {
         </div>
        
       </div>
-
-    
+   
       <a  classNames="mt-2 mx-2 my-2 " 
            onClick={() => navigate("/home")}
           role="button" 
