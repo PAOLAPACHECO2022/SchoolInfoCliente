@@ -11,7 +11,7 @@ const NewCourse = () => {
   const { gradeId } = useParams();
   const teachers = useSelector((state) => state.teachers);
   const dispatch = useDispatch();
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const [nameCourse, setNameCourse] = useState("");
   const [teacherId, setTeacherId] = useState("");
@@ -20,7 +20,7 @@ const NewCourse = () => {
     e.preventDefault();
 
     const savedCourseResponse = await fetch(
-      `${API_URL}/courses/createCourse`,
+      `https://schoolinfoserver.onrender.com/courses/createCourse`,
       {
         method: "POST",
         headers: {
@@ -44,7 +44,7 @@ const NewCourse = () => {
 
   const getTeachers = async () => {
     const response = await fetch(
-      `${API_URL}/teachers`,
+      `https://schoolinfoserver.onrender.com/teachers`,
      
     
     {
