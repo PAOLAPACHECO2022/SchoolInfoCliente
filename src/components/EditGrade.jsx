@@ -9,7 +9,7 @@ const EditGrade = () => {
     const token = useSelector((state) => state.token);
     const {level, gradeId} = useParams();
     const [gradeData, setGradeData] = useState(null);
-    const API_URL = process.env.REACT_APP_API_URL;
+    
 
     const getGrade = async () => {
         const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${gradeId}/grade`, {
