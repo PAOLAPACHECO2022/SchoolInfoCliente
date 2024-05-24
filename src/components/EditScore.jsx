@@ -9,7 +9,7 @@ const EditScore = () => {
     const token = useSelector((state) => state.token);
     const {courseId, gradeId, scoreId} = useParams();
     const [scoreData, setScoreData] = useState(null);
-    const API_URL = process.env.REACT_APP_API_URL;
+   
 
     const getScore = async () => {
         const response = await fetch(`https://schoolinfoserver.onrender.com/scores/${scoreId}/score`, {
