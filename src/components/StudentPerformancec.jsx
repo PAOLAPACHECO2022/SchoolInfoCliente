@@ -10,11 +10,11 @@ const StudentPerformancec = () => {
   const user = useSelector((state) => state.user);
   const [currentPage, setCurrentPage] = useState(0);
   const [performancecRecord, setPerformancecRecord] = useState([]);
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const getPerformancecRecord = async () => {
     const response = await fetch(
-      `${API_URL}/performancec/${user._id}`,
+      `https://schoolinfoserver.onrender.com/performancec/${user._id}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
