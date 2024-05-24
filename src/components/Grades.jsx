@@ -13,10 +13,10 @@ const Grades = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const navigate = useNavigate();
   const { level } = useParams();
-  const API_URL = process.env.REACT_APP_API_URL;
+  
 
   const getGrades = async () => {
-    const response = await fetch(`${API_URL}/grades/${level}`,
+    const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${level}`,
   
      {
       method: "GET",
@@ -35,7 +35,7 @@ const Grades = () => {
   };
 
   const handleDelete = async (gradeId) => {
-    const response = await fetch(`${API_URL}/grades/${gradeId}/delete`, {
+    const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${gradeId}/delete`, {
       method: "DELETE",
       headers: {Authorization: `Bearer ${token}`, "Content-Type": "application/json",},
     });
