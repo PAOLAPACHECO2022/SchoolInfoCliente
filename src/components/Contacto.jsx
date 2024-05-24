@@ -6,7 +6,7 @@ import { useNavigate } from "react-router-dom";
 export default class Contacto extends Component {
     
   render() {
-    
+    const navigate = useNavigate();
     return (
       
         <header class="fondoy fondoy-wrap p-5 d-flex">
