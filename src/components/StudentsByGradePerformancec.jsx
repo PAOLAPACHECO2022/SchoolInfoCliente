@@ -1,3 +1,4 @@
+
 import Aside from "./Aside";
 import Sidebar from "./Sidebar";
 import { useEffect, useState } from "react";
@@ -5,8 +6,6 @@ import { setStudents } from "state";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import '../index.css'; 
-
-
 const StudentsByGradePerformancec = () => {
   const dispatch = useDispatch();
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
@@ -14,10 +13,9 @@ const StudentsByGradePerformancec = () => {
   const students = useSelector((state) => state.students);
   const token = useSelector((state) => state.token);
   const { gradeId } = useParams();
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const getStudents = async () => {
-    const response = await fetch(`${API_URL}/students/${gradeId}`, {
+    const response = await fetch(`https://schoolinfoserver.onrender.com/students/${gradeId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -27,7 +25,7 @@ const StudentsByGradePerformancec = () => {
 
   const getPerformancecData = async () => {
     const response = await fetch(
-      `${API_URL}/performancec/${gradeId}/${date}`,
+      `https://schoolinfoserver.onrender.com/performancec/${gradeId}/${date}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -53,8 +51,7 @@ const StudentsByGradePerformancec = () => {
     try {
       e.preventDefault();
       const savedPerformancecResponse = await fetch(
-     
-        `${API_URL}/performancec/registerPerformancec`,
+        "https://schoolinfoserver.onrender.com/performancec/registerPerformancec",
         {
           method: "POST",
           headers: {
