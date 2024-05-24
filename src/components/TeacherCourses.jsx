@@ -12,9 +12,9 @@ const TeacherCourses = () => {
     const courses = useSelector((state) => state.courses);
     const token = useSelector((state) => state.token);
     const user = useSelector((state) => state.user);
-    const API_URL = process.env.REACT_APP_API_URL;
+    
     const getCourses = async () => {
-        const response = await fetch(`${API_URL}/courses/${user._id}/teacher`, {
+        const response = await fetch(`https://schoolinfoserver.onrender.com/courses/${user._id}/teacher`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
