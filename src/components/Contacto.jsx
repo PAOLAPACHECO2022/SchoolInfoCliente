@@ -117,7 +117,7 @@ export default class Contacto extends Component {
        
       </div>
 
-      <a  classNames="mt-2 mx-2 my-2 " type="submit  " href = "http://localhost:3001/home"
+      <a  classNames="mt-2 mx-2 my-2 " type="submit  " href = "https://schoolinfocliente.onrender.com/home"
       style={{
         color: '#4c0546',
         fontWeight: 'bold',
