@@ -1,3 +1,4 @@
+
 import Sidebar from "./Sidebar";
 import Aside from "./Aside";
 import { useEffect, useState } from "react";
@@ -12,7 +13,6 @@ const NewCourse = () => {
   const teachers = useSelector((state) => state.teachers);
   const dispatch = useDispatch();
 
-
   const [nameCourse, setNameCourse] = useState("");
   const [teacherId, setTeacherId] = useState("");
 
@@ -20,7 +20,7 @@ const NewCourse = () => {
     e.preventDefault();
 
     const savedCourseResponse = await fetch(
-      `https://schoolinfoserver.onrender.com/courses/createCourse`,
+      "https://schoolinfoserver.onrender.com/courses/createCourse",
       {
         method: "POST",
         headers: {
@@ -43,11 +43,7 @@ const NewCourse = () => {
   };
 
   const getTeachers = async () => {
-    const response = await fetch(
-      `https://schoolinfoserver.onrender.com/teachers`,
-     
-    
-    {
+    const response = await fetch("https://schoolinfoserver.onrender.com/teachers", {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
