@@ -5,7 +5,6 @@ import { setStudents } from "state";
 import { useDispatch, useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import '../index.css'; 
-
 const StudentsByGradeAttendance = () => {
   const dispatch = useDispatch();
   const [date, setDate] = useState(new Date().toISOString().split("T")[0]);
@@ -13,10 +12,9 @@ const StudentsByGradeAttendance = () => {
   const students = useSelector((state) => state.students);
   const token = useSelector((state) => state.token);
   const { gradeId } = useParams();
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const getStudents = async () => {
-    const response = await fetch(`${API_URL}/students/${gradeId}`, {
+    const response = await fetch(`https://schoolinfoserver.onrender.com/students/${gradeId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -26,7 +24,7 @@ const StudentsByGradeAttendance = () => {
 
   const getAttendanceData = async () => {
     const response = await fetch(
-      `${API_URL}/attendance/${gradeId}/${date}`,
+      `https://schoolinfoserver.onrender.com/attendance/${gradeId}/${date}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -52,7 +50,7 @@ const StudentsByGradeAttendance = () => {
     try {
       e.preventDefault();
       const savedAttendanceResponse = await fetch(
-          `${API_URL}/attendance/registerAttendance`,
+        "https://schoolinfoserver.onrender.com/attendance/registerAttendance",
         {
           method: "POST",
           headers: {
