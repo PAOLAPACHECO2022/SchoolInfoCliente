@@ -108,7 +108,7 @@ export default class Contactologin extends Component {
                 </button>
                 <a className="mt-2 mx-2 my-2 move-right" 
          type="submit" 
-         href="https://schoolinfocliente.onrender.com"
+         href="https://schoolinfoserver.onrender.com"
          style={{
            color: '#4c0546',
            fontWeight: 'bold',
@@ -147,3 +147,4 @@ export default class Contactologin extends Component {
   }
 
 }
+
