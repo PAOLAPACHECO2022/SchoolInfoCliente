@@ -30,13 +30,7 @@ const LoginPage = () => {
 
   const login = async () => {
     try {
-      const loggedInResponse = await fetch(
-        
-       
-        `${API_URL}auth/login`,
-        
-        
-        {
+      const loggedInResponse = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ typeUser, email, password }),
@@ -63,11 +57,7 @@ const LoginPage = () => {
 
   const loginStudent = async () => {
     try {
-      const loggedInResponse = await fetch(
-      
-        `${API_URL}auth/login`,
-        
-       {
+      const loggedInResponse = await fetch(`${API_URL}/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ typeUser: "Student", dni, password }),
@@ -229,6 +219,4 @@ const LoginPage = () => {
 };
 
 export default LoginPage;
-
-
 
