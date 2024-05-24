@@ -12,7 +12,7 @@ const NewActivity = () => {
   const { courseId, gradeId } = useParams();
   const students = useSelector((state) => state.students);
   const dispatch = useDispatch();
-  const API_URL = process.env.REACT_APP_API_URL;
+ 
   
   const [area, setArea] = useState('');
   const [indicator, setIndicator] = useState('');
@@ -26,7 +26,7 @@ const NewActivity = () => {
 
     const savedActivityResponse = await fetch(
      
-      `${API_URL}/activities/createActivity`,
+      `https://schoolinfoserver.onrender.com/activities/createActivity`,
       {
         method: "POST",
         headers: {
@@ -59,7 +59,7 @@ const NewActivity = () => {
       
     
       
-      `${API_URL}/students/${gradeId}`,
+      `https://schoolinfoserver.onrender.com/students/${gradeId}`,
       {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
