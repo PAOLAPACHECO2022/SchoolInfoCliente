@@ -117,7 +117,14 @@ export default class Contacto extends Component {
        
       </div>
 
-      <a  classNames="mt-2 mx-2 my-2 " type="submit  " href = "https://schoolinfocliente.onrender.com/home"
+
+     className="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-500 dark:hover:bg-gray-500"
+                  onClick={() => navigate("/contacto")}
+                  role="button"      
+      <a  classNames="mt-2 mx-2 my-2 " 
+           onClick={() => navigate("/home")}
+          role="button" 
+        
       style={{
         color: '#4c0546',
         fontWeight: 'bold',
