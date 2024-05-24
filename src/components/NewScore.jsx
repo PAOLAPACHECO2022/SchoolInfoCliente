@@ -1,3 +1,4 @@
+
 import Sidebar from "./Sidebar";
 import Aside from "./Aside";
 import { useEffect, useState } from "react";
@@ -12,7 +13,6 @@ const NewScore = () => {
   const { courseId, gradeId } = useParams();
   const students = useSelector((state) => state.students);
   const dispatch = useDispatch();
- 
 
   const [area, setArea] = useState('');
   const [score1, setScore1] = useState(0);
@@ -26,8 +26,7 @@ const NewScore = () => {
     e.preventDefault();
 
     const savedScoreResponse = await fetch(
-     
-      `https://schoolinfoserver.onrender.com/scores/createScore`,
+      "https://schoolinfoserver.onrender.com/scores/createScore",
       {
         method: "POST",
         headers: {
