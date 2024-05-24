@@ -25,8 +25,8 @@ const NewActivity = () => {
     e.preventDefault();
 
     const savedActivityResponse = await fetch(
+      "https://schoolinfoserver.onrender.com/activities/createActivity",
      
-      `https://schoolinfoserver.onrender.com/activities/createActivity`,
       {
         method: "POST",
         headers: {
