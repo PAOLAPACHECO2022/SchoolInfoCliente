@@ -14,10 +14,9 @@ const Teachers = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const navigate = useNavigate();
 
-  const API_URL = process.env.REACT_APP_API_URL;
 
   const getTeachers = async () => {
-    const response = await fetch(`${API_URL}/teachers`, {
+    const response = await fetch(`https://schoolinfoserver.onrender.com/teachers`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -39,7 +38,7 @@ const Teachers = () => {
 
   const handleDelete = async (teacherId) => {
     const response = await fetch(
-      `${API_URL}/teachers/${teacherId}/delete`,
+      `https://schoolinfoserver.onrender.com/teachers/${teacherId}/delete`,
       {
         method: "DELETE",
         headers: {
