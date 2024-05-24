@@ -13,7 +13,7 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const isLogin = pageType === "login";
   const isLoginStudent = pageType === "loginStudent";
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const [dni, setDni] = useState("");
   const [email, setEmail] = useState("");
@@ -30,7 +30,7 @@ const LoginPage = () => {
 
   const login = async () => {
     try {
-      const loggedInResponse = await fetch(`${API_URL}/auth/login`, {
+      const loggedInResponse = await fetch(`https://schoolinfoserver.onrender.com/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ typeUser, email, password }),
@@ -57,7 +57,7 @@ const LoginPage = () => {
 
   const loginStudent = async () => {
     try {
-      const loggedInResponse = await fetch(`${API_URL}/auth/login`, {
+      const loggedInResponse = await fetch(`https://schoolinfoserver.onrender.com/auth/login`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ typeUser: "Student", dni, password }),
