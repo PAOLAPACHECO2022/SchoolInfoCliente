@@ -12,7 +12,7 @@ const EditGrade = () => {
     const API_URL = process.env.REACT_APP_API_URL;
 
     const getGrade = async () => {
-        const response = await fetch(`${API_URL}/grades/${gradeId}/grade`, {
+        const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${gradeId}/grade`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
