@@ -6,7 +6,7 @@ import '../index.css';
 const FormEditCourse = ({courseData, setCourseData, gradeId}) => {
   const token = useSelector((state) => state.token);
   const navigate = useNavigate();
-  const API_URL = process.env.REACT_APP_API_URL;
+
 
   const [nameCourse, setNameCourse] = useState(courseData.nameCourse);
 
@@ -14,7 +14,7 @@ const FormEditCourse = ({courseData, setCourseData, gradeId}) => {
     e.preventDefault();
 
     const response = await fetch(
-      `${API_URL}/courses/${courseData._id}/edit`,
+      `https://schoolinfoserver.onrender.com/courses/${courseData._id}/edit`,
       {
         method: "PATCH",
         headers: {
