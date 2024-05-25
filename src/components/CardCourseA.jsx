@@ -9,7 +9,7 @@ const CardCourseA = ({ courseId, courseName, teacherName, gradeId }) => {
     <>
      
       <Card border="primary"     
-      className="fondox max-w-sm rounded overflow-hidden shadow-lg m-5 px-4 py-4"
+      className="fondox max-w-sm rounded overflow-hidden shadow-lg m-5 px-4 py-4 overflow-x-auto overflow-y-auto"
       key={courseId}
       role="button"
       onClick={() => navigate(`/activitiesByCourse/${courseId}/${gradeId}`)}
