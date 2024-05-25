@@ -91,8 +91,8 @@ const StudentsByGradePerformancec = () => {
       <Sidebar />
       <Aside />
       <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-y-auto overflow-x-auto">
-          <div className="p-6 bg-white rounded-lg shadow-lg">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+          <div className="p-6 bg-white rounded-lg shadow-lg overflow-x-auto overflow-y-auto">
             <h2 className="text-2xl font-bold mb-4">Performance Convivial</h2>
             <div className="flex mb-4">
               <label htmlFor="date" className="mr-4">
