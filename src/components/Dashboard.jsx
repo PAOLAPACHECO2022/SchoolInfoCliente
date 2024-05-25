@@ -20,8 +20,7 @@ const Dashboard = ({
                   className="text-2xl text-center text-gray-400 dark:text-gray-500 uppercase"
                   style={{
                     color: "rgb(249, 218, 47)",
-                    fontWeight: "bold",
-                    marginLeft: "-1cm", marginRight: "1cm",
+              
                     padding: "5px",
                     borderRadius: "5px",
                     display: "inline-block",
@@ -43,7 +42,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                   marginLeft: "-1cm", marginRight: "1cm",
+    
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -58,7 +57,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                     marginLeft: "-1cm", marginRight: "1cm",
+       
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -75,7 +74,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      marginLeft: "-1cm", marginRight: "1cm",
+                
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -94,7 +93,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                     marginLeft: "-1cm", marginRight: "1cm",
+             
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -111,7 +110,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                       marginLeft: "-1cm", marginRight: "1cm",
+               
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
