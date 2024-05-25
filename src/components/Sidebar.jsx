@@ -39,8 +39,8 @@ const Sidebar = () => {
                                     className="h-12 mr-12"
                                     alt="FlowBite Logo"
                                 />
-                                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">
-                                    SCHOOL.INFO
+                                <span className="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"  style={{ marginLeft: '-1cm' }}>
+                                    School.Info
                                 </span>
                             </div>
                         </div>
