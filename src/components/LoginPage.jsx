@@ -103,9 +103,9 @@ const LoginPage = () => {
                 </h1>
             </div>
 
-            <div id="card_cuadro">
+            <div id="card_cuadro overflow-y-auto">
                 <div
-                    className="card d-flex text-center rounded-md mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl"
+                    className="card d-flex text-center rounded-md mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl overflow-y-auto"
                     id="card_sesion"
                 >
                     {/* Contenido del div */}
