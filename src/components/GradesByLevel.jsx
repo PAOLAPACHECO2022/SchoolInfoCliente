@@ -34,12 +34,12 @@ const GradesByLevel = () => {
   return (
     <>
           <div className="p-4 sm:ml-64"> 
-    <div className="fondoy fondoy-wrap p-5">
+    <div className="fondoy fondoy-wrap p-5 overflow-x-auto overflow-y-auto">
     
       <Sidebar />
       <Aside />
       <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto">
           <div>
             {grades.map((grade) => (
                 <CardGrade key={grade._id} gradeId={grade._id} gradeName={grade.gradeName} level={level} action={action} />
