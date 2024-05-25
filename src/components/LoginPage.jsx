@@ -95,7 +95,7 @@ const LoginPage = () => {
 
     return (
         <div className="inicios">
-            <div className="text-center mt-5 mx-5 my-5">
+            <div className="text-center mt-5 mx-5 my-5 overflow-y-auto">
                 <h1 className="text-5xl font-extrabold dark:text-white">
                     <small className="ml-2 font-semibold text-gray-500 dark:text-gray-400 ">
                         Welcome to the School
