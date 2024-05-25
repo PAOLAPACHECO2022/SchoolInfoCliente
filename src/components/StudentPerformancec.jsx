@@ -60,7 +60,7 @@ const StudentPerformancec = () => {
       <Sidebar />
       <Aside />
       <div className="p-4 sm:ml-64">
-        <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto">
+        <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto">
           <div className="flex flex-row justify-center mb-4">
             <h1 className="text-3xl font-bold mb-4">Performance Convivial</h1>
           </div>
