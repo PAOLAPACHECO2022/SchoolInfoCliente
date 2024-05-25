@@ -100,7 +100,7 @@ const ActivitiesByCourse = () => {
   return (
     <>
       <div className="p-4 sm:ml-64"> 
-        <div className="fondoy fondoy-wrap p-5">
+        <div className="fondoy fondoy-wrap p-5 overflow-y-auto overflow-x-auto">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64 ">
