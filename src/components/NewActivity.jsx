@@ -78,11 +78,11 @@ const NewActivity = () => {
   return (
     <>
        
-    <div className="fondoy fondoy-wrap p-5">
+    <div className="fondoy fondoy-wrap p-5 overflow-y-auto overflow-x-auto">
       <Sidebar />
       <Aside />
       <div className="p-4 sm:ml-64">
-        <div className="fondox p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <div className="fondox p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-y-auto overflow-x-auto">
           <div className="flex flex-row justify-between mb-4">
             <h1 className="text-3xl font-bold mb-4">New Activity</h1>
           </div>
