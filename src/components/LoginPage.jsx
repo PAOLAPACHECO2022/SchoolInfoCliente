@@ -202,7 +202,7 @@ const LoginPage = () => {
                             >
                                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 2v.51l8 5 8-5V6H4zm16 12v-7.51l-7.39 4.62c-.33.21-.73.32-1.11.32s-.78-.11-1.11-.32L4 10.49V18h16z"></path>
                             </svg>
-                            <span className="flex-1 ml-3 whitespace-nowrap underline">
+                            <span className=" ml-3 whitespace-nowrap underline d-flex text-center rounded-md mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl">
                                 Can't log in? request to update credentials
                             </span>
                         </div>
