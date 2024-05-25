@@ -65,7 +65,8 @@ const Teachers = () => {
           <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
             Edit
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDelete(teacher._id)}>
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style={{ marginRight: '-2cm' }}
+            onClick={() => handleDelete(teacher._id)}>
             Delete
           </button>
         </td>
