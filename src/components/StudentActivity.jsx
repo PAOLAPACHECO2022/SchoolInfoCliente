@@ -82,6 +82,7 @@ const StudentActivity = () => {
                   value={searchTerm} // Se vincula al estado
                   onChange={(e) => setSearchTerm(e.target.value)} // Actualiza el estado
                   className="border px-4 py-2 rounded border-black"
+                  style={{ marginRight: '-2cm' }}
                 />
               </div>
               
