@@ -86,11 +86,11 @@ const StudentsByGradeAttendance = () => {
   return (
     <>
      <div className="p-4 sm:ml-64"> 
-    <div className="fondoy fondoy-wrap p-5">
+    <div className="fondoy fondoy-wrap p-5 overflow-y-auto overflow-x-auto">
       <Sidebar />
       <Aside />
       <div className="p-4 sm:ml-64">
-        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+        <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto">
           <div className="p-6 bg-white rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-4">Attendance</h2>
             <div className="flex mb-4">
