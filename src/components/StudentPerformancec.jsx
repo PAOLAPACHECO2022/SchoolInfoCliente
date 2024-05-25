@@ -64,7 +64,7 @@ const StudentPerformancec = () => {
           <div className="flex flex-row justify-center mb-4">
             <h1 className="text-3xl font-bold mb-4">Performance Convivial</h1>
           </div>
-          <div className=" border-dashed rounded-lg p-4">
+          <div className=" border-dashed rounded-lg p-4 overflow-x-auto">
           <table className="table-auto w-full text-left">
             <thead >
               <tr >
