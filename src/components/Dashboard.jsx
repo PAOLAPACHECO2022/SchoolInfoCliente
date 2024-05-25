@@ -21,7 +21,7 @@ const Dashboard = ({
                   style={{
                     color: "rgb(249, 218, 47)",
                     fontWeight: "bold",
-                    border: "2px solid #056183",
+                   
                     padding: "5px",
                     borderRadius: "5px",
                     display: "inline-block",
@@ -42,7 +42,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      border: "2px solid #056183",
+                  
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -57,7 +57,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      border: "2px solid #056183",
+                    
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -74,7 +74,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      border: "2px solid #056183",
+                     
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -93,7 +93,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      border: "2px solid #056183",
+                    
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -110,7 +110,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      border: "2px solid #056183",
+                      
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
