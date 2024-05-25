@@ -74,8 +74,8 @@ const Teachers = () => {
 
   return (
     <>
-      <div className="p-4 sm:ml-64"> 
-        <div className="fondoy fondoy-wrap p-5">
+      <div className="p-4 sm:ml-64 overflow-y-auto"> 
+        <div className="fondoy fondoy-wrap p-5 overflow-y-auto">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64">
