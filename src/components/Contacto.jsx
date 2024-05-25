@@ -6,7 +6,7 @@ export default class Contacto extends Component {
     
     return (
       
-        <header class="fondoy fondoy-wrap p-5 d-flex ">
+        <header class="fondoy fondoy-wrap p-5 d-flex overflow-x-auto overflow-y-auto ">
       <div class="container d-flex text-center rounded-md  fondox mt-5 mx-5 my-5 overflow-y-auto overflow-x-auto" Style={{ fontFamily: "Raleway,bold" }} id="card_sesion">
         <div class="section-title mt-5  ">
         
