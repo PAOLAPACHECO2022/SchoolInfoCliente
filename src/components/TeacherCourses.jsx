@@ -29,11 +29,11 @@ const TeacherCourses = () => {
     return (
         <>
     <div className="p-4 sm:ml-64"> 
-    <div className="fondoy fondoy-wrap p-5">
+    <div className="fondoy fondoy-wrap p-5 overflow-y-auto overflow-x-auto">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64">
-            <div className=" p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <div className=" p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-y-auto overflow-x-auto">
               <div>
                 {courses.map((course) => (
                     <CardCourse key={course._id} courseId={course._id} courseName={course.nameCourse} teacherName={course.teacherName} gradeId={course.gradeId} />
