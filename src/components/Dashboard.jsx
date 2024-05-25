@@ -14,17 +14,15 @@ const Dashboard = ({
       <div className="p-4 sm:ml-64">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
           {role !== "Admin" && (
-            <div className="grid grid-cols-3 gap-4 mb-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
               <div className="flex items-center justify-center h-24 rounded fondox">
                 <p
                   className="text-2xl text-center text-gray-400 dark:text-gray-500 uppercase"
                   style={{
                     color: "rgba(2, 2, 2, 0.8)",
-              
                     padding: "5px",
                     borderRadius: "5px",
                     display: "inline-block",
-                    
                   }}
                 >
                   Welcome {`${user.firstName} ${user.lastName}`}
@@ -35,14 +33,13 @@ const Dashboard = ({
 
           {role === "Admin" && (
             <>
-              <div className="grid grid-cols-3 gap-4 mb-4">
-                <div className="bg-white  flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-4">
+                <div className="bg-white flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                   <p
                     className="text-gray-400 text-center dark:text-gray-500 uppercase"
                     style={{
                       color: "rgba(2, 2, 2, 0.8)",
                       fontWeight: "bold",
-    
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -53,11 +50,10 @@ const Dashboard = ({
                 </div>
                 <div className="bg-white flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                   <p
-                    className="text-gray-400 text-center dark:text-gray-500 uppercase d-flex"
+                    className="text-gray-400 text-center dark:text-gray-500 uppercase"
                     style={{
                       color: "rgba(2, 2, 2, 0.8)",
                       fontWeight: "bold",
-       
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -68,13 +64,12 @@ const Dashboard = ({
                     }`}
                   </p>
                 </div>
-                <div className="bg-white flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800 d-flex">
+                <div className="bg-white flex items-center justify-center h-24 rounded bg-gray-50 dark:bg-gray-800">
                   <p
                     className="text-gray-400 text-center dark:text-gray-500 uppercase"
                     style={{
                       color: "rgba(2, 2, 2, 0.8)",
                       fontWeight: "bold",
-                
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -86,14 +81,13 @@ const Dashboard = ({
                   </p>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div className="bg-white flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800 d-flex">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div className="bg-white flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
                   <p
                     className="text-gray-400 text-center dark:text-gray-500 uppercase"
                     style={{
                       color: "rgba(2, 2, 2, 0.8)",
                       fontWeight: "bold",
-             
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -104,13 +98,12 @@ const Dashboard = ({
                     }`}
                   </p>
                 </div>
-                <div className="bg-white flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800 d-flex">
+                <div className="bg-white flex items-center justify-center rounded bg-gray-50 h-28 dark:bg-gray-800">
                   <p
                     className="text-gray-400 text-center dark:text-gray-500 uppercase"
                     style={{
                       color: "rgba(2, 2, 2, 0.8)",
                       fontWeight: "bold",
-               
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
