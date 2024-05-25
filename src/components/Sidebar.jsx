@@ -79,7 +79,7 @@ const Sidebar = () => {
                                     aria-labelledby="menu-button"
                                     tabIndex="-1"
                                 >
-                                    <div className="py-1" role="none">
+                                    <div className="py-1 overflow-y-auto" role="none">
                                         <p
                                             className="text-gray-700 block px-4 py-2 text-sm"
                                             role="menuitem"
@@ -89,7 +89,7 @@ const Sidebar = () => {
                                             Profile
                                         </p>
 
-                                        <div className="fondo-gris h-full px-3 pb-4 overflow-y-auto dark:bg-gray-500">
+                                        <div className="fondo-gris h-full px-3 pb-4 overflow-y-auto dark:bg-gray-500 overflow-y-auto">
                                             <ul className="space-y-2">
                                                 {role === "Admin" && (
                                                     <>
