@@ -21,10 +21,11 @@ const Dashboard = ({
                   style={{
                     color: "rgb(249, 218, 47)",
                     fontWeight: "bold",
-                   
+                    marginLeft: "-1cm", marginRight: "1cm",
                     padding: "5px",
                     borderRadius: "5px",
                     display: "inline-block",
+                    
                   }}
                 >
                   Welcome {`${user.firstName} ${user.lastName}`}
@@ -42,7 +43,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                  
+                   marginLeft: "-1cm", marginRight: "1cm",
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -57,7 +58,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                    
+                     marginLeft: "-1cm", marginRight: "1cm",
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -74,7 +75,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                     
+                      marginLeft: "-1cm", marginRight: "1cm",
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -93,7 +94,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                    
+                     marginLeft: "-1cm", marginRight: "1cm",
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
@@ -110,7 +111,7 @@ const Dashboard = ({
                     style={{
                       color: "rgb(249, 218, 47)",
                       fontWeight: "bold",
-                      
+                       marginLeft: "-1cm", marginRight: "1cm",
                       padding: "5px",
                       borderRadius: "5px",
                       display: "inline-block",
