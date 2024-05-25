@@ -28,7 +28,7 @@ const CardGrade = ({ gradeId, gradeName, level, action }) => {
 
   
     <div
-      className="fondox max-w-sm rounded overflow-hidden shadow-lg m-5"
+      className="fondox max-w-sm rounded overflow-hidden shadow-lg m-5 overflow-x-auto overflow-y-auto"
       key={gradeId}
       role="button"
       onClick={() => redirectByAction(action)}
