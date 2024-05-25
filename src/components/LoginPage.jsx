@@ -105,7 +105,8 @@ const LoginPage = () => {
       </div>
     
       <div id="card_cuadro">
-        <div className="card d-flex text-center rounded-md" id="card_sesion">        
+        <div className="card d-flex text-center rounded-md mx-auto max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl xl:max-w-2xl" id="card_sesion">
+
           <form className="p-10" onSubmit={handleSubmit}>
             {isLogin ? (
               <>
