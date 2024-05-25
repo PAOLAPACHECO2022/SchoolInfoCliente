@@ -11,7 +11,7 @@ export default class Contactologin extends Component {
       
         <header class="fondoy fondoy-wrap p-5 d-flex">
            
-      <div class="container d-flex text-center rounded-md  fondox mt-5 mx-5 my-5" Style={{ fontFamily: "Raleway,bold" }} id="card_sesion">
+      <div class="container d-flex text-center rounded-md  fondox mt-5 mx-5 my-5 overflow-y-auto overflow-x-auto" Style={{ fontFamily: "Raleway,bold" }} id="card_sesion">
         <div class="section-title mt-5  ">
                     
           <p class=" mt-2 mx-2 my-2"  
