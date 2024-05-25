@@ -63,7 +63,7 @@ const StudentScore = () => {
   return (
     <>
       <div className="p-4 sm:ml-64">
-        <div className="fondoy fondoy-wrap p-5">
+        <div className="fondoy fondoy-wrap p-5 overflow-x-auto overflow-y-auto">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64">
@@ -76,6 +76,7 @@ const StudentScore = () => {
                   value={searchTerm} // Se vincula al estado
                   onChange={(e) => setSearchTerm(e.target.value)} // Actualiza el estado
                   className="border px-4 py-2 rounded border-black"
+                    style={{ marginRight: '-2cm' }}
                 />
               </div>
               <table className="table-auto w-full text-left bg-danger">
