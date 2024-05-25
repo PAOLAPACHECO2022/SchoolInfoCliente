@@ -94,11 +94,11 @@ const ScoresByCourse = () => {
   return (
     <>
       <div className="p-4 sm:ml-64"> 
-        <div className="fondoy fondoy-wrap p-5">
+        <div className="fondoy fondoy-wrap p-5 overflow-x-auto overflow-y-auto ">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64">
-            <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+            <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto">
               <h1 className="text-3xl font-bold mb-4">Scores</h1>
               <div className="flex flex-col sm:flex-row mb-4">
                 <input
