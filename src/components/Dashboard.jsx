@@ -10,7 +10,7 @@ const Dashboard = ({
   const user = useSelector((state) => state.user);
 
   return (
-    <div className="fondo p-5">
+    <div className="fondo p-5 overflow-x-auto overflow-y-auto">
       <div className="p-4 sm:ml-64">
         <div className="p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
           {role !== "Admin" && (
