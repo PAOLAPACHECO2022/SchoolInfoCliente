@@ -113,12 +113,12 @@ const ActivitiesByCourse = () => {
                   value={searchTerm} // Conectado al estado
                   onChange={(e) => setSearchTerm(e.target.value)} // Actualiza el estado cuando se escribe
                   className="border-4 border-black px-4 py-2 rounded"
-                  style={{ marginRight: '-2cm' }}
+                  style={{ marginRight: '-1cm' }}
                 />
                 <button
                   className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
                   onClick={() => navigate(`/newActivity/${courseId}/${gradeId}`)}
-                  style={{ marginRight: '-2cm' }}
+                  style={{ marginRight: '-1cm' }}
                 >
                   New Activity
                 </button>
