@@ -72,12 +72,18 @@ const Teachers = () => {
         <td className="border px-4 py-2">{teacher.phone}</td>
         <td className="border px-4 py-2">{teacher.area}</td>
         <td className="border px-4 py-2">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2 sm:mb-0" onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
+          <div className="flex space-x-2">
+          <button
+          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+          onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
             Edit
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDelete(teacher._id)}>
+          <button 
+         className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
+         onClick={() => handleDelete(teacher._id)}>
             Delete
           </button>
+          </div>
         </td>
       </tr>
     ));
