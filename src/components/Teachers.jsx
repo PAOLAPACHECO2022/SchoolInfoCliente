@@ -12,8 +12,8 @@ const Teachers = () => {
   const teachers = useSelector((state) => state.teachers);
   const token = useSelector((state) => state.token);
   const [currentPage, setCurrentPage] = useState(0);
+  const [searchTerm, setSearchTerm] = useState(""); // Estado para el valor de búsqueda
   const navigate = useNavigate();
-
 
   const getTeachers = async () => {
     const response = await fetch("https://schoolinfoserver.onrender.com/teachers",{
@@ -30,7 +30,6 @@ const Teachers = () => {
 
   const PER_PAGE = 10;
   const offset = currentPage * PER_PAGE;
-  const pageCount = Math.ceil(teachers.length / PER_PAGE);
 
   const handlePageClick = ({ selected: selectedPage }) => {
     setCurrentPage(selectedPage);
@@ -52,7 +51,18 @@ const Teachers = () => {
     getTeachers();
   };
 
-  const teachersToDisplay = teachers
+  const handleSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  // Filtrar los profesores por el valor de búsqueda
+  const filteredTeachers = teachers.filter(teacher =>
+    `${teacher.firstName} ${teacher.lastName}`.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const pageCount = Math.ceil(filteredTeachers.length / PER_PAGE);
+
+  const teachersToDisplay = filteredTeachers
     .slice(offset, offset + PER_PAGE)
     .map((teacher) => (
       <tr key={teacher._id}>
@@ -62,11 +72,10 @@ const Teachers = () => {
         <td className="border px-4 py-2">{teacher.phone}</td>
         <td className="border px-4 py-2">{teacher.area}</td>
         <td className="border px-4 py-2">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
+          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2 mb-2 sm:mb-0" onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
             Edit
           </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" style={{ marginRight: '-2cm' }}
-            onClick={() => handleDelete(teacher._id)}>
+          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDelete(teacher._id)}>
             Delete
           </button>
         </td>
@@ -75,33 +84,43 @@ const Teachers = () => {
 
   return (
     <>
-      <div className="p-4 sm:ml-64 overflow-y-auto"> 
-        <div className="fondoy fondoy-wrap p-5 overflow-y-auto">
+      <div className="p-4 sm:ml-64"> 
+        <div className="fondoy fondoy-wrap p-5">
           <Sidebar />
           <Aside />
           <div className="p-4 sm:ml-64">
-            <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto">
-              <div className="flex flex-row justify-between mb-4">
-                <h1 className="text-3xl font-bold mb-4 justify-center">Teachers</h1>
-                <button className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2" 
-                  style={{ marginRight: '-2cm' }}
-                  onClick={() => navigate("/newTeacher")}>
+          <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+              <h1 className="text-3xl font-bold mb-4 justify-center">Teachers</h1>
+              <div className="flex flex-col sm:flex-row mb-4">
+                <input
+                  type="text"
+                  placeholder="Search by name Teachers"
+                  value={searchTerm}
+                  onChange={handleSearch}
+                  className="mb-4 sm:mb-0 sm:mr-4 px-4 py-2 border rounded"
+                />
+                <button
+                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  onClick={() => navigate("/newTeacher")}
+                >
                   New teacher
                 </button>
               </div>
-              <table className="table-auto w-full text-left">
-                <thead>
-                  <tr>
-                    <th className="px-4 py-2">First Name</th>
-                    <th className="px-4 py-2">Last Name</th>
-                    <th className="px-4 py-2">Email</th>
-                    <th className="px-4 py-2">Phone</th>
-                    <th className="px-4 py-2">Area</th>
-                    <th className="px-4 py-2">Action</th>
-                  </tr>
-                </thead>
-                <tbody>{teachersToDisplay}</tbody>
-              </table>
+              <div className="overflow-x-auto overflow-y-auto">
+                <table className="table-auto w-full text-left">
+                  <thead>
+                    <tr>
+                      <th className="px-4 py-2">First Name</th>
+                      <th className="px-4 py-2">Last Name</th>
+                      <th className="px-4 py-2">Email</th>
+                      <th className="px-4 py-2">Phone</th>
+                      <th className="px-4 py-2">Area</th>
+                      <th className="px-4 py-2">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>{teachersToDisplay}</tbody>
+                </table>
+              </div>
               <div className="flex justify-center mt-4">
                 <ReactPaginate
                   previousLabel={"← Previous"}
@@ -124,3 +143,5 @@ const Teachers = () => {
 };
 
 export default Teachers;
+
+
