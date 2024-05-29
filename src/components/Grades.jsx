@@ -90,7 +90,7 @@ const Grades = () => {
                 </button>
               </div>
               <div className="overflow-x-auto overflow-y-auto">
-                <table className="table-auto  text-left">
+                <table className="table-auto w-full  text-left">
                   <thead>
                     <tr className="bg-gray-200">
                       <th className="px-6 py-3 border-b-2 border-gray-300 text-gray-600 text-sm leading-4 tracking-wider">Name Grade</th>
