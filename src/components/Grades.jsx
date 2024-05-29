@@ -6,6 +6,7 @@ import Sidebar from "./Sidebar";
 import Aside from "./Aside";
 import { useNavigate, useParams } from "react-router-dom";
 import '../index.css'; 
+
 const Grades = () => {
   const dispatch = useDispatch();
   const grades = useSelector((state) => state.grades);
@@ -13,12 +14,10 @@ const Grades = () => {
   const [currentPage, setCurrentPage] = useState(0);
   const navigate = useNavigate();
   const { level } = useParams();
-  
 
   const getGrades = async () => {
     const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${level}`,
-  
-     {
+    {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
     });
@@ -37,12 +36,12 @@ const Grades = () => {
   const handleDelete = async (gradeId) => {
     const response = await fetch(`https://schoolinfoserver.onrender.com/grades/${gradeId}/delete`, {
       method: "DELETE",
-      headers: {Authorization: `Bearer ${token}`, "Content-Type": "application/json",},
+      headers: { Authorization: `Bearer ${token}`, "Content-Type": "application/json" },
     });
     console.log(response);
     console.log("Grade deleted");
     getGrades();
-  }
+  };
 
   useEffect(() => {
     getGrades();
@@ -51,70 +50,75 @@ const Grades = () => {
   const gradesToDisplay = grades
     .slice(offset, offset + PER_PAGE)
     .map((grade) => (
-      <tr key={grade._id}>
-        <td className="border px-4 py-2">{grade.gradeName}</td>
-        <td className="border px-4 py-2">{grade.level}</td>
-        <td className="border px-4 py-2">
-          <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mr-2" onClick={() => navigate(`/editGrade/${level}/${grade._id}`)}>
-            Edit
-          </button>
-          <button className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded" onClick={() => handleDelete(grade._id)}>
-            Delete
-          </button>
+      <tr key={grade._id} className="bg-white hover:bg-gray-100 border-b">
+        <td className="px-6 py-4 whitespace-nowrap">{grade.gradeName}</td>
+        <td className="px-6 py-4 whitespace-nowrap">{grade.level}</td>
+        <td className="px-6 py-4 whitespace-nowrap">
+          <div className="flex  space-x-2">
+            <button
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+              onClick={() => navigate(`/editGrade/${level}/${grade._id}`)}
+            >
+              Edit
+            </button>
+            <button 
+              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+              onClick={() => handleDelete(grade._id)}
+            >
+              Delete
+            </button>
+          </div>
         </td>
       </tr>
     ));
 
   return (
-   
     <>
-   <div className="p-4 sm:ml-64"> 
-    <div className="fondoy fondoy-wrap p-5 overflow-x-auto overflow-y-auto">
-     
-      <Sidebar />
-      <Aside />
-   
-      <div className="p-4 sm:ml-64">
-        <div className=" bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto ">
-          <div className="flex flex-row justify-between mb-4">
-            <h1 className="text-3xl font-bold mb-4  ">Grades</h1>
-            <button
-              className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mr-2"
-              onClick={() => navigate(`/newGrade/${level}`)}
-            >
-              New grade
-            </button>
-          </div>
-          <table className=" table-auto">
-            <thead>
-              <tr>
-                <th className="px-4 py-2">Name Grade</th>
-                <th className="px-4 py-2">Level</th>
-                <th className="px-4 py-2">Actions</th>
-              </tr>
-            </thead>
-            <tbody>{gradesToDisplay}</tbody>
-          </table>
-          <div className="flex justify-center mt-4">
-            <ReactPaginate
-            
-              previousLabel= {"← Previous"}
-              nextLabel={"Next →"}
-              pageCount={pageCount}
-              onPageChange={handlePageClick}
-              containerClassName={"pagination"}
-              previousLinkClassName={"previous_page"}
-              nextLinkClassName={"next_page"}
-              disabledClassName={"pagination__link--disabled"}
-              activeClassName={"pagination__link--active"}
-            />
+      <div className="p-4 sm:ml-64"> 
+        <div className="fondoy fondoy-wrap p-5">
+          <Sidebar />
+          <Aside />
+          <div className="p-4 sm:ml-64">
+            <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
+              <h1 className="text-3xl font-bold mb-4 text-center">Grades</h1>
+              <div className="flex flex-col sm:flex-row mb-4">
+                <button
+                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  onClick={() => navigate(`/newGrade/${level}`)}
+                >
+                  New grade
+                </button>
+              </div>
+              <div className="overflow-x-auto overflow-y-auto">
+                <table className="table-auto w-full text-left">
+                  <thead>
+                    <tr className="bg-gray-200">
+                      <th className="px-6 py-3 border-b-2 border-gray-300 text-gray-600 text-sm leading-4 tracking-wider">Name Grade</th>
+                      <th className="px-6 py-3 border-b-2 border-gray-300 text-gray-600 text-sm leading-4 tracking-wider">Level</th>
+                      <th className="px-6 py-3 border-b-2 border-gray-300 text-gray-600 text-sm leading-4 tracking-wider">Actions</th>
+                    </tr>
+                  </thead>
+                  <tbody>{gradesToDisplay}</tbody>
+                </table>
+              </div>
+              <div className="flex justify-center mt-4">
+                <ReactPaginate
+                  previousLabel={"← Previous"}
+                  nextLabel={"Next →"}
+                  pageCount={pageCount}
+                  onPageChange={handlePageClick}
+                  containerClassName={"pagination"}
+                  previousLinkClassName={"previous_page"}
+                  nextLinkClassName={"next_page"}
+                  disabledClassName={"pagination__link--disabled"}
+                  activeClassName={"pagination__link--active"}
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <div/>
-      </div></div>
     </>
-   
   );
 };
 
