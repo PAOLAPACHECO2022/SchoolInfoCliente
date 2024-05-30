@@ -80,7 +80,7 @@ const Grades = () => {
           <Aside />
           <div className="p-4 sm:ml-64">
             <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-              <h1 className="text-left text-xs font-bold text-black uppercase tracking-wider">Grades</h1>
+              <h1 className="text-left  font-bold text-black uppercase tracking-wider">Grades</h1>
               <div className="flex flex-col sm:flex-row mb-4">
                 <button
                   className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
@@ -93,9 +93,9 @@ const Grades = () => {
                 <table className="table-auto w-full  text-left">
                   <thead>
                     <tr className="bg-gray-200">
-                      <th className="text-3xl px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">Name Grade</th>
-                      <th className="text-3xl px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">Level</th>
-                      <th className="text-3xl px-6 py-3 text-left text-xs font-bold text-black uppercase tracking-wider">Actions</th>
+                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Name Grade</th>
+                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Level</th>
+                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Actions</th>
                     </tr>
                   </thead>
                   <tbody>{gradesToDisplay}</tbody>
