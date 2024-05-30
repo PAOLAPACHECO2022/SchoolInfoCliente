@@ -56,13 +56,13 @@ const Grades = () => {
         <td className="px-6 py-4 whitespace-nowrap">
           <div className="flex  space-x-2">
             <button
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+              className="bottonstu bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
               onClick={() => navigate(`/editGrade/${level}/${grade._id}`)}
             >
               Edit
             </button>
             <button 
-              className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+              className="fondo-gris bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
               onClick={() => handleDelete(grade._id)}
             >
               Delete
@@ -83,7 +83,7 @@ const Grades = () => {
               <h1 className="text-left  font-bold text-black uppercase tracking-wider">Grades</h1>
               <div className="flex flex-col sm:flex-row mb-4">
                 <button
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  className="bottonstu bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                   onClick={() => navigate(`/newGrade/${level}`)}
                 >
                   New grade
