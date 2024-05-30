@@ -80,7 +80,7 @@ const Grades = () => {
           <Aside />
           <div className="p-4 sm:ml-64">
             <div className="bg-white p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14">
-              <h1 className="text-3xl font-bold mb-4 text-center">Grades</h1>
+              <h1 className="text-3xl font-bold mb-4">Grades</h1>
               <div className="flex flex-col sm:flex-row mb-4">
                 <button
                   className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
