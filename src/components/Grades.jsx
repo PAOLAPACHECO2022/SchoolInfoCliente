@@ -93,9 +93,9 @@ const Grades = () => {
                 <table className="table-auto w-full  text-left">
                   <thead>
                     <tr className="bg-gray-200">
-                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Name Grade</th>
-                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Level</th>
-                      <th className="text-3xl px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Actions</th>
+                      <th className=" px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Name Grade</th>
+                      <th className=" px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Level</th>
+                      <th className=" px-6 py-3 text-left  font-bold text-black uppercase tracking-wider">Actions</th>
                     </tr>
                   </thead>
                   <tbody>{gradesToDisplay}</tbody>
