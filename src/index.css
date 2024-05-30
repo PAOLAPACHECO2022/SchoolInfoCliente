@@ -88,7 +88,20 @@ tr, table {
 }
 
 
+.bottonstu {
+  background: #00AC95 ;  
   
+  
+}
+
+
+th {
+  background: rgba(233, 238, 237, 0.8); 
+  
+ 
+}
+
+
 
 /* Fondo con transparencia */
 .fondoy {
