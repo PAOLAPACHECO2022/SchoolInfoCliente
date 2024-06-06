@@ -65,7 +65,7 @@ const Teachers = () => {
   const teachersToDisplay = filteredTeachers
     .slice(offset, offset + PER_PAGE)
     .map((teacher) => (
-      <tr key={teacher._id}>
+      <tr key={teacher._id}  className="bg-white hover:bg-gray-100 border-b">
         <td className="border px-4 py-2">{teacher.firstName}</td>
         <td className="border px-4 py-2">{teacher.lastName}</td>
         <td className="border px-4 py-2">{teacher.email}</td>
