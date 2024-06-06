@@ -77,13 +77,13 @@ const ScoresByCourse = () => {
         <td className="border px-4 py-2">
            <div className="flex space-x-2">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
+            className="bottonstu bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded w-full"
             onClick={() => navigate(`/editScore/${courseId}/${gradeId}/${score._id}`)}
           >
             Edit
           </button>
           <button
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
+            className="fondo-gris bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded w-full"
             onClick={() => handleDelete(score._id)}
           >
             Delete
@@ -111,7 +111,7 @@ const ScoresByCourse = () => {
                   className="border px-4 py-2 rounded mb-2 sm:mr-2"
                 />
                 <button
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  className="bottonstu bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                   onClick={() => navigate(`/newScore/${courseId}/${gradeId}`)}
                 >
                   New Score
