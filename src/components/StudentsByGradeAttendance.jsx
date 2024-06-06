@@ -134,7 +134,7 @@ const StudentsByGradeAttendance = () => {
               </table>
               <button
                 onClick={handleSaveAttendance}
-                className="bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
+                className="bottonstu bg-green-500 text-white px-4 py-2 rounded-md hover:bg-green-600"
               >
                 Save Attendance
               </button>
