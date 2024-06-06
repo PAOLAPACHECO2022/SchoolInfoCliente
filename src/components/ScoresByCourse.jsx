@@ -65,7 +65,7 @@ const ScoresByCourse = () => {
   const scoresToDisplay = filteredScores
     .slice(offset, offset + PER_PAGE)
     .map((score) => (
-      <tr key={score._id}>
+      <tr key={score._id}  className="bg-white hover:bg-gray-100 border-b">
         <td className="border px-4 py-2">{score.studentName}</td>
         <td className="border px-4 py-2">{score.courseName}</td>
         <td className="border px-4 py-2">{score.area}</td>
