@@ -73,7 +73,7 @@ const StudentsByGrade = () => {
   const studentsToDisplay = filteredStudents
     .slice(offset, offset + PER_PAGE)
     .map((student) => (
-      <tr key={student._id}>
+      <tr key={student._id}  className="bg-white hover:bg-gray-100 border-b">
         <td className="border px-4 py-2">{`${student.firstName} ${student.lastName}`}</td>
         <td className="border px-4 py-2">{student.dni}</td>
         <td className="border px-4 py-2">{student.phone}</td>
