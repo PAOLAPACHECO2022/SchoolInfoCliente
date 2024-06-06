@@ -74,12 +74,12 @@ const Teachers = () => {
         <td className="border px-4 py-2">
           <div className="flex space-x-2">
           <button
-          className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
+          className="bottonstu bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded "
           onClick={() => navigate(`/editTeacher/${teacher._id}`)}>
             Edit
           </button>
           <button 
-         className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
+         className="fondo-gris bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded "
          onClick={() => handleDelete(teacher._id)}>
             Delete
           </button>
@@ -106,7 +106,7 @@ const Teachers = () => {
                   className="mb-4 sm:mb-0 sm:mr-4 px-4 py-2 border rounded"
                 />
                 <button
-                  className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
+                  className="bottonstu bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"
                   onClick={() => navigate("/newTeacher")}
                 >
                   New teacher
