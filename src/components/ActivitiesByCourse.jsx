@@ -71,7 +71,7 @@ const ActivitiesByCourse = () => {
   const activitiesToDisplay = filteredActivities
     .slice(offset, offset + PER_PAGE)
     .map((activity) => (
-      <tr key={activity._id}>
+      <tr key={activity._id} className="bg-white hover:bg-gray-100 border-b">
         <td className="border px-4 py-2">{activity.studentName}</td>
         <td className="border px-4 py-2">{activity.courseName}</td>
         <td className="border px-4 py-2">{activity.area}</td>
@@ -125,6 +125,7 @@ const ActivitiesByCourse = () => {
                   New Activity
                 </button>
               </div>
+              <div className="overflow-x-auto overflow-y-auto">
               <table className="table-auto w-full text-left">
                 <thead>
                   <tr>
@@ -140,6 +141,7 @@ const ActivitiesByCourse = () => {
                 </thead>
                 <tbody>{activitiesToDisplay}</tbody>
               </table>
+                </div>
               <div className="flex justify-center mt-4">
                 <ReactPaginate
                   previousLabel={"← Previous"}
