@@ -11,10 +11,10 @@ const CoursesByGradeScore = () => {
     const courses = useSelector((state) => state.courses);
     const token = useSelector((state) => state.token);
     const {gradeId} = useParams();
-    const API_URL = process.env.REACT_APP_API_URL;
+ 
 
     const getCourses = async () => {
-        const response = await fetch(`${API_URL}/courses/${gradeId}`, {
+        const response = await fetch(`https://schoolinfocliente.onrender.com/courses/${gradeId}`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
@@ -36,7 +36,11 @@ const CoursesByGradeScore = () => {
             <div className=" p-4 border-2 border-gray-200 border-dashed rounded-lg dark:border-gray-700 mt-14 overflow-x-auto overflow-y-auto">
               <div>
                 {courses.map((course) => (
-                    <CardCourse key={course._id} courseId={course._id} courseName={course.nameCourse} teacherName={course.teacherName} gradeId={course.gradeId} />
+                    <CardCourse key={course._id} 
+                    courseId={course._id} 
+                    courseName={course.nameCourse} 
+                    teacherName={course.teacherName} 
+                    gradeId={course.gradeId} />
                 ))}
               </div>
             </div>
