@@ -14,7 +14,7 @@ const CoursesByGradeScore = () => {
  
 
     const getCourses = async () => {
-        const response = await fetch(`https://schoolinfocliente.onrender.com/courses/${gradeId}`, {
+        const response = await fetch(`https://schoolinfoserver.onrender.com/courses/${gradeId}`, {
             method: "GET",
             headers: {Authorization: `Bearer ${token}`},
         });
